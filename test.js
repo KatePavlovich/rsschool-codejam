@@ -1,6 +1,6 @@
 const assert = require('assert');
 Object.freeze(assert);
-const sumOfOther = require('./sumOfOther');
+const sumOfOther = require('./src/sumOfOther');
 describe('sumOfOther test', () => {
   it('should return an array where each element is the sum of other elements except element value', () => {
     const sum = sumOfOther([2, 3, 4, 1]);
