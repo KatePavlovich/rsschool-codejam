@@ -17,3 +17,21 @@ describe('sumOfOther test', () => {
     assert.deepEqual(sum, [44, -9, 24, 13]);
   });
 });
+
+const make = require('./src/make');
+describe('make', () => {
+  function sum(a, b) {
+    return a + b;
+  }
+  it('count sum', () => {
+    assert.equal(make(15)(34, 21, 666)(41)(sum), 777);
+  });
+
+  it('count sum', () => {
+    assert.deepEqual(make(15)(34, 21)(41)(sum), 111);
+  });
+
+  it('count sum', () => {
+    assert.deepEqual(make(15)(34, 21, 666)(41)(5)(125)(sum), 907);
+  });
+});
